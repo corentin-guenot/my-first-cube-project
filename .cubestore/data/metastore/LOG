@@ -780,3 +780,220 @@ Interval stall: 00:00:0.000 H:M:S, 0.0 percent
 2023/11/29-15:36:26.337574 140376018216704 [db/wal_manager.cc:84] Latest Archived log: 244
 2023/11/29-15:36:56.320951 140376016078592 [db/wal_manager.cc:84] Latest Archived log: 244
 2023/11/29-15:37:26.603113 140376018216704 [db/wal_manager.cc:84] Latest Archived log: 244
+2023/11/29-15:37:56.589695 140376016078592 [db/wal_manager.cc:84] Latest Archived log: 244
+2023/11/29-15:38:26.572940 140376020317952 [db/wal_manager.cc:84] Latest Archived log: 244
+2023/11/29-15:38:26.576938 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:97] Started the snapshot process -- creating snapshot in directory /cube/conf/.cubestore/data/metastore/../metastore-1701272306576
+2023/11/29-15:38:26.576944 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:112] Snapshot process -- using temporary directory /cube/conf/.cubestore/data/metastore/../metastore-1701272306576.tmp
+2023/11/29-15:38:26.578897 140375977219840 [db/db_impl/db_impl_files.cc:47] File Deletions Disabled
+2023/11/29-15:38:26.579912 140375977219840 [db/db_impl/db_impl_write.cc:2101] [default] New memtable created with log file: #250. Immutable memtables: 0.
+2023/11/29-15:38:26.580004 140375987984128 (Original Log Time 2023/11/29-15:38:26.580000) [db/db_impl/db_impl_compaction_flush.cc:3275] Compaction nothing to do
+2023/11/29-15:38:26.580051 140374966269696 (Original Log Time 2023/11/29-15:38:26.580042) [db/db_impl/db_impl_compaction_flush.cc:2840] Calling FlushMemTableToOutputFile with column family [default], flush slots available 1, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 0
+2023/11/29-15:38:26.580053 140374966269696 [db/flush_job.cc:859] [default] [JOB 8] Flushing memtable with next log file: 250
+2023/11/29-15:38:26.580067 140374966269696 EVENT_LOG_v1 {"time_micros": 1701272306580062, "job": 8, "event": "flush_started", "num_memtables": 1, "num_entries": 153, "num_deletes": 63, "total_data_size": 11241, "memory_usage": 14984, "flush_reason": "Get Live Files"}
+2023/11/29-15:38:26.580069 140374966269696 [db/flush_job.cc:888] [default] [JOB 8] Level-0 flush table #251: started
+2023/11/29-15:38:26.582844 140374966269696 EVENT_LOG_v1 {"time_micros": 1701272306582824, "cf_name": "default", "job": 8, "event": "table_file_creation", "file_number": 251, "file_size": 1622, "file_checksum": "", "file_checksum_func_name": "Unknown", "smallest_seqno": 8275, "largest_seqno": 8422, "table_properties": {"data_size": 588, "index_size": 39, "index_partitions": 0, "top_level_index_size": 0, "index_key_is_user_key": 1, "index_value_is_delta_encoded": 1, "filter_size": 0, "raw_key_size": 1057, "raw_average_key_size": 28, "raw_value_size": 8, "raw_average_value_size": 0, "num_data_blocks": 1, "num_entries": 37, "num_filter_entries": 0, "num_deletions": 36, "num_merge_operands": 0, "num_range_deletions": 0, "format_version": 0, "fixed_key_len": 0, "filter_policy": "", "column_family_name": "default", "column_family_id": 0, "comparator": "leveldb.BytewiseComparator", "merge_operator": "meta_store merge", "prefix_extractor_name": "rocksdb.FixedPrefix.13", "property_collectors": "[]", "compression": "NoCompression", "compression_options": "window_bits=-14; level=32767; strategy=0; max_dict_bytes=0; zstd_max_train_bytes=0; enabled=0; max_dict_buffer_bytes=0; use_zstd_dict_trainer=1; ", "creation_time": 1701272037, "oldest_key_time": 1701272037, "file_creation_time": 1701272306, "slow_compression_estimated_data_size": 0, "fast_compression_estimated_data_size": 0, "db_id": "fa55ebed-ee06-445e-8104-2726a67066dc", "db_session_id": "4U5WXBZFD8ZPZWPKDEPE", "orig_file_number": 251, "seqno_to_time_mapping": "N/A"}}
+2023/11/29-15:38:26.583598 140374966269696 [db/flush_job.cc:1023] [default] [JOB 8] Flush lasted 3549 microseconds, and 486 cpu microseconds.
+2023/11/29-15:38:26.585119 140374966269696 (Original Log Time 2023/11/29-15:38:26.583589) [db/flush_job.cc:974] [default] [JOB 8] Level-0 flush table #251: 1622 bytes OK
+2023/11/29-15:38:26.585122 140374966269696 (Original Log Time 2023/11/29-15:38:26.583601) [db/memtable_list.cc:521] [default] Level-0 commit table #251 started
+2023/11/29-15:38:26.585123 140374966269696 (Original Log Time 2023/11/29-15:38:26.584716) [db/memtable_list.cc:725] [default] Level-0 commit table #251: memtable #1 done
+2023/11/29-15:38:26.585124 140374966269696 (Original Log Time 2023/11/29-15:38:26.584730) EVENT_LOG_v1 {"time_micros": 1701272306584724, "job": 8, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [2, 1, 0, 0, 0, 0, 0], "immutable_memtables": 0}
+2023/11/29-15:38:26.585124 140374966269696 (Original Log Time 2023/11/29-15:38:26.584743) [db/db_impl/db_impl_compaction_flush.cc:301] [default] Level summary: files[2 1 0 0 0 0 0] max score 0.50
+2023/11/29-15:38:26.585155 140374655870720 (Original Log Time 2023/11/29-15:38:26.585153) [db/db_impl/db_impl_compaction_flush.cc:3275] Compaction nothing to do
+2023/11/29-15:38:26.585170 140375977219840 [WARN] [db/db_impl/db_impl_files.cc:51] File Deletions Disabled, but already disabled. Counter: 2
+2023/11/29-15:38:26.589144 140375977219840 [db/wal_manager.cc:84] Latest Archived log: 244
+2023/11/29-15:38:26.589149 140375977219840 [WARN] [db/db_impl/db_impl_files.cc:91] File Deletions Enable, but not really enabled. Counter: 1
+2023/11/29-15:38:26.589461 140375977219840 [db/db_filesnapshot.cc:407] Number of log files 2
+2023/11/29-15:38:26.589467 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000251.sst
+2023/11/29-15:38:26.591332 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000249.sst
+2023/11/29-15:38:26.593118 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000241.sst
+2023/11/29-15:38:26.594868 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:137] Copying MANIFEST-000245
+2023/11/29-15:38:26.597496 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:143] Creating CURRENT
+2023/11/29-15:38:26.599156 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking OPTIONS-000247
+2023/11/29-15:38:26.601239 140375977219840 [db/db_impl/db_impl_files.cc:84] File Deletions Enabled
+2023/11/29-15:38:26.601256 140375977219840 [db/db_impl/db_impl_files.cc:468] [JOB 0] Try to delete WAL files size 12423, prev total WAL file size 12423, number of live WAL files 2.
+2023/11/29-15:38:26.602805 140375977219840 [db/wal_manager.cc:287] Move log file /cube/conf/.cubestore/data/metastore/000248.log to /cube/conf/.cubestore/data/metastore/archive/000248.log -- OK
+2023/11/29-15:38:26.603159 140375977219840 [db/wal_manager.cc:287] Move log file /cube/conf/.cubestore/data/metastore/000248.log to /cube/conf/.cubestore/data/metastore/archive/000248.log -- IO error: No such file or directory: While renaming a file to /cube/conf/.cubestore/data/metastore/archive/000248.log: /cube/conf/.cubestore/data/metastore/000248.log: No such file or directory
+2023/11/29-15:38:26.606218 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:179] Snapshot DONE. All is good
+2023/11/29-15:38:26.606221 140375977219840 [utilities/checkpoint/checkpoint_impl.cc:181] Snapshot sequence number: 8422
+2023/11/29-15:38:56.707526 140376016078592 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:39:26.691449 140376018216704 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:39:56.674516 140376016078592 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:40:26.658332 140376020317952 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:40:56.643140 140376020317952 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:41:26.626009 140376018216704 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:41:56.613693 140376018216704 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:42:26.598785 140376016078592 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:42:37.298234 140374630692608 [db/db_impl/db_impl.cc:1110] ------- DUMPING STATS -------
+2023/11/29-15:42:37.298875 140374630692608 [db/db_impl/db_impl.cc:1111] 
+** DB Stats **
+Uptime(secs): 21816.2 total, 600.0 interval
+Cumulative writes: 8636 writes, 825 keys, 8636 commit groups, 1.0 writes per commit group, ingest: 0.00 GB, 0.00 MB/s
+Cumulative WAL: 8636 writes, 0 syncs, 8636.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 455 writes, 825 keys, 455 commit groups, 1.0 writes per commit group, ingest: 0.05 MB, 0.00 MB/s
+Interval WAL: 455 writes, 0 syncs, 455.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      2/0   18.40 KB   0.5      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      2.5      0.01              0.00         2    0.004       0      0       0.0       0.0
+  L1      1/0   56.03 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Sum      3/0   74.43 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      2.5      0.01              0.00         2    0.004       0      0       0.0       0.0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      2.5      0.01              0.00         2    0.004       0      0       0.0       0.0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      2.5      0.01              0.00         2    0.004       0      0       0.0       0.0
+
+Blob file count: 0, total size: 0.0 GB, garbage size: 0.0 GB, space amp: 0.0
+
+Uptime(secs): 21816.2 total, 4200.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+Block cache LRUCache@0x5622ab582300#21 capacity: 8.00 MB usage: 74.03 KB table_size: 256 occupancy: 87 collections: 34 last_copies: 0 last_secs: 4.1e-05 secs_since: 0
+Block cache entry stats(count,size,portion): DataBlock(20,72.24 KB,0.881875%) Misc(1,0.00 KB,0%)
+
+** File Read Latency Histogram By Level [default] **
+2023/11/29-15:42:56.582995 140376020317952 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:43:26.566798 140376013965056 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:43:56.550149 140376013965056 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:43:56.557220 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:97] Started the snapshot process -- creating snapshot in directory /cube/conf/.cubestore/data/metastore/../metastore-1701272636556
+2023/11/29-15:43:56.557230 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:112] Snapshot process -- using temporary directory /cube/conf/.cubestore/data/metastore/../metastore-1701272636556.tmp
+2023/11/29-15:43:56.558908 140374957876992 [db/db_impl/db_impl_files.cc:47] File Deletions Disabled
+2023/11/29-15:43:56.560175 140374957876992 [db/db_impl/db_impl_write.cc:2101] [default] New memtable created with log file: #252. Immutable memtables: 0.
+2023/11/29-15:43:56.560261 140374966269696 (Original Log Time 2023/11/29-15:43:56.560250) [db/db_impl/db_impl_compaction_flush.cc:2840] Calling FlushMemTableToOutputFile with column family [default], flush slots available 1, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 1
+2023/11/29-15:43:56.560263 140374966269696 [db/flush_job.cc:859] [default] [JOB 10] Flushing memtable with next log file: 252
+2023/11/29-15:43:56.560277 140374966269696 EVENT_LOG_v1 {"time_micros": 1701272636560272, "job": 10, "event": "flush_started", "num_memtables": 1, "num_entries": 373, "num_deletes": 149, "total_data_size": 26622, "memory_usage": 34056, "flush_reason": "Get Live Files"}
+2023/11/29-15:43:56.560278 140374966269696 [db/flush_job.cc:888] [default] [JOB 10] Level-0 flush table #253: started
+2023/11/29-15:43:56.560428 140375987984128 (Original Log Time 2023/11/29-15:43:56.560426) [db/db_impl/db_impl_compaction_flush.cc:3275] Compaction nothing to do
+2023/11/29-15:43:56.563255 140374966269696 EVENT_LOG_v1 {"time_micros": 1701272636563238, "cf_name": "default", "job": 10, "event": "table_file_creation", "file_number": 253, "file_size": 6453, "file_checksum": "", "file_checksum_func_name": "Unknown", "smallest_seqno": 8428, "largest_seqno": 8795, "table_properties": {"data_size": 5402, "index_size": 55, "index_partitions": 0, "top_level_index_size": 0, "index_key_is_user_key": 1, "index_value_is_delta_encoded": 1, "filter_size": 0, "raw_key_size": 3303, "raw_average_key_size": 28, "raw_value_size": 3434, "raw_average_value_size": 29, "num_data_blocks": 2, "num_entries": 115, "num_filter_entries": 0, "num_deletions": 68, "num_merge_operands": 0, "num_range_deletions": 0, "format_version": 0, "fixed_key_len": 0, "filter_policy": "", "column_family_name": "default", "column_family_id": 0, "comparator": "leveldb.BytewiseComparator", "merge_operator": "meta_store merge", "prefix_extractor_name": "rocksdb.FixedPrefix.13", "property_collectors": "[]", "compression": "NoCompression", "compression_options": "window_bits=-14; level=32767; strategy=0; max_dict_bytes=0; zstd_max_train_bytes=0; enabled=0; max_dict_buffer_bytes=0; use_zstd_dict_trainer=1; ", "creation_time": 1701272307, "oldest_key_time": 1701272307, "file_creation_time": 1701272636, "slow_compression_estimated_data_size": 0, "fast_compression_estimated_data_size": 0, "db_id": "fa55ebed-ee06-445e-8104-2726a67066dc", "db_session_id": "4U5WXBZFD8ZPZWPKDEPE", "orig_file_number": 253, "seqno_to_time_mapping": "N/A"}}
+2023/11/29-15:43:56.563970 140374966269696 [db/flush_job.cc:1023] [default] [JOB 10] Flush lasted 3711 microseconds, and 488 cpu microseconds.
+2023/11/29-15:43:56.565515 140374966269696 (Original Log Time 2023/11/29-15:43:56.563960) [db/flush_job.cc:974] [default] [JOB 10] Level-0 flush table #253: 6453 bytes OK
+2023/11/29-15:43:56.565517 140374966269696 (Original Log Time 2023/11/29-15:43:56.563973) [db/memtable_list.cc:521] [default] Level-0 commit table #253 started
+2023/11/29-15:43:56.565518 140374966269696 (Original Log Time 2023/11/29-15:43:56.565111) [db/memtable_list.cc:725] [default] Level-0 commit table #253: memtable #1 done
+2023/11/29-15:43:56.565519 140374966269696 (Original Log Time 2023/11/29-15:43:56.565124) EVENT_LOG_v1 {"time_micros": 1701272636565121, "job": 10, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [3, 1, 0, 0, 0, 0, 0], "immutable_memtables": 0}
+2023/11/29-15:43:56.565520 140374966269696 (Original Log Time 2023/11/29-15:43:56.565140) [db/db_impl/db_impl_compaction_flush.cc:301] [default] Level summary: files[3 1 0 0 0 0 0] max score 0.75
+2023/11/29-15:43:56.565553 140374655870720 (Original Log Time 2023/11/29-15:43:56.565551) [db/db_impl/db_impl_compaction_flush.cc:3275] Compaction nothing to do
+2023/11/29-15:43:56.565567 140374957876992 [WARN] [db/db_impl/db_impl_files.cc:51] File Deletions Disabled, but already disabled. Counter: 2
+2023/11/29-15:43:56.569092 140374957876992 [db/wal_manager.cc:84] Latest Archived log: 248
+2023/11/29-15:43:56.569096 140374957876992 [WARN] [db/db_impl/db_impl_files.cc:91] File Deletions Enable, but not really enabled. Counter: 1
+2023/11/29-15:43:56.569403 140374957876992 [db/db_filesnapshot.cc:407] Number of log files 3
+2023/11/29-15:43:56.569409 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000253.sst
+2023/11/29-15:43:56.571198 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000251.sst
+2023/11/29-15:43:56.572959 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000249.sst
+2023/11/29-15:43:56.574655 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000241.sst
+2023/11/29-15:43:56.576297 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:137] Copying MANIFEST-000245
+2023/11/29-15:43:56.581701 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:143] Creating CURRENT
+2023/11/29-15:43:56.583528 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking OPTIONS-000247
+2023/11/29-15:43:56.586058 140374957876992 [db/db_impl/db_impl_files.cc:84] File Deletions Enabled
+2023/11/29-15:43:56.586076 140374957876992 [db/db_impl/db_impl_files.cc:468] [JOB 0] Try to delete WAL files size 26922, prev total WAL file size 26922, number of live WAL files 2.
+2023/11/29-15:43:56.587670 140374957876992 [db/wal_manager.cc:287] Move log file /cube/conf/.cubestore/data/metastore/000250.log to /cube/conf/.cubestore/data/metastore/archive/000250.log -- OK
+2023/11/29-15:43:56.588040 140374957876992 [db/wal_manager.cc:287] Move log file /cube/conf/.cubestore/data/metastore/000250.log to /cube/conf/.cubestore/data/metastore/archive/000250.log -- IO error: No such file or directory: While renaming a file to /cube/conf/.cubestore/data/metastore/archive/000250.log: /cube/conf/.cubestore/data/metastore/000250.log: No such file or directory
+2023/11/29-15:43:56.589669 140374957876992 [file/delete_scheduler.cc:78] Deleted file /cube/conf/.cubestore/data/metastore/archive/000244.log immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2023/11/29-15:43:56.592063 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:179] Snapshot DONE. All is good
+2023/11/29-15:43:56.592066 140374957876992 [utilities/checkpoint/checkpoint_impl.cc:181] Snapshot sequence number: 8795
+2023/11/29-15:48:26.519854 140376018216704 [db/wal_manager.cc:84] Latest Archived log: 250
+2023/11/29-15:48:56.504211 140376018216704 [db/wal_manager.cc:84] Latest Archived log: 250
+2023/11/29-15:49:26.485594 140376016078592 [db/wal_manager.cc:84] Latest Archived log: 250
+2023/11/29-15:49:26.487529 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:97] Started the snapshot process -- creating snapshot in directory /cube/conf/.cubestore/data/metastore/../metastore-1701272966487
+2023/11/29-15:49:26.487535 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:112] Snapshot process -- using temporary directory /cube/conf/.cubestore/data/metastore/../metastore-1701272966487.tmp
+2023/11/29-15:49:26.492150 140374955775744 [db/db_impl/db_impl_files.cc:47] File Deletions Disabled
+2023/11/29-15:49:26.493372 140374955775744 [db/db_impl/db_impl_write.cc:2101] [default] New memtable created with log file: #254. Immutable memtables: 0.
+2023/11/29-15:49:26.493449 140375987984128 (Original Log Time 2023/11/29-15:49:26.493430) [db/db_impl/db_impl_compaction_flush.cc:3275] Compaction nothing to do
+2023/11/29-15:49:26.493506 140374966269696 (Original Log Time 2023/11/29-15:49:26.493481) [db/db_impl/db_impl_compaction_flush.cc:2840] Calling FlushMemTableToOutputFile with column family [default], flush slots available 1, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 1
+2023/11/29-15:49:26.493509 140374966269696 [db/flush_job.cc:859] [default] [JOB 14] Flushing memtable with next log file: 254
+2023/11/29-15:49:26.493524 140374966269696 EVENT_LOG_v1 {"time_micros": 1701272966493517, "job": 14, "event": "flush_started", "num_memtables": 1, "num_entries": 9, "num_deletes": 9, "total_data_size": 279, "memory_usage": 1176, "flush_reason": "Get Live Files"}
+2023/11/29-15:49:26.493525 140374966269696 [db/flush_job.cc:888] [default] [JOB 14] Level-0 flush table #255: started
+2023/11/29-15:49:26.499712 140374966269696 EVENT_LOG_v1 {"time_micros": 1701272966499689, "cf_name": "default", "job": 14, "event": "table_file_creation", "file_number": 255, "file_size": 1241, "file_checksum": "", "file_checksum_func_name": "Unknown", "smallest_seqno": 8796, "largest_seqno": 8804, "table_properties": {"data_size": 207, "index_size": 39, "index_partitions": 0, "top_level_index_size": 0, "index_key_is_user_key": 1, "index_value_is_delta_encoded": 1, "filter_size": 0, "raw_key_size": 261, "raw_average_key_size": 29, "raw_value_size": 0, "raw_average_value_size": 0, "num_data_blocks": 1, "num_entries": 9, "num_filter_entries": 0, "num_deletions": 9, "num_merge_operands": 0, "num_range_deletions": 0, "format_version": 0, "fixed_key_len": 0, "filter_policy": "", "column_family_name": "default", "column_family_id": 0, "comparator": "leveldb.BytewiseComparator", "merge_operator": "meta_store merge", "prefix_extractor_name": "rocksdb.FixedPrefix.13", "property_collectors": "[]", "compression": "NoCompression", "compression_options": "window_bits=-14; level=32767; strategy=0; max_dict_bytes=0; zstd_max_train_bytes=0; enabled=0; max_dict_buffer_bytes=0; use_zstd_dict_trainer=1; ", "creation_time": 1701272876, "oldest_key_time": 1701272876, "file_creation_time": 1701272966, "slow_compression_estimated_data_size": 0, "fast_compression_estimated_data_size": 0, "db_id": "fa55ebed-ee06-445e-8104-2726a67066dc", "db_session_id": "4U5WXBZFD8ZPZWPKDEPE", "orig_file_number": 255, "seqno_to_time_mapping": "N/A"}}
+2023/11/29-15:49:26.500464 140374966269696 [db/flush_job.cc:1023] [default] [JOB 14] Flush lasted 6975 microseconds, and 570 cpu microseconds.
+2023/11/29-15:49:26.502019 140374966269696 (Original Log Time 2023/11/29-15:49:26.500431) [db/flush_job.cc:974] [default] [JOB 14] Level-0 flush table #255: 1241 bytes OK
+2023/11/29-15:49:26.502023 140374966269696 (Original Log Time 2023/11/29-15:49:26.500478) [db/memtable_list.cc:521] [default] Level-0 commit table #255 started
+2023/11/29-15:49:26.502024 140374966269696 (Original Log Time 2023/11/29-15:49:26.501521) [db/memtable_list.cc:725] [default] Level-0 commit table #255: memtable #1 done
+2023/11/29-15:49:26.502024 140374966269696 (Original Log Time 2023/11/29-15:49:26.501560) EVENT_LOG_v1 {"time_micros": 1701272966501534, "job": 14, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [4, 1, 0, 0, 0, 0, 0], "immutable_memtables": 0}
+2023/11/29-15:49:26.502025 140374966269696 (Original Log Time 2023/11/29-15:49:26.501591) [db/db_impl/db_impl_compaction_flush.cc:301] [default] Level summary: files[4 1 0 0 0 0 0] max score 1.00
+2023/11/29-15:49:26.502103 140374655870720 [db/compaction/compaction_job.cc:1998] [default] [JOB 15] Compacting 4@0 + 1@1 files to L1, score 1.00
+2023/11/29-15:49:26.502107 140374655870720 [db/compaction/compaction_job.cc:2002] [default]: Compaction start summary: Base version 6 Base level 0, inputs: [255(1241B) 253(6453B) 251(1622B) 249(16KB)], [241(56KB)]
+2023/11/29-15:49:26.502149 140374955775744 [WARN] [db/db_impl/db_impl_files.cc:51] File Deletions Disabled, but already disabled. Counter: 2
+2023/11/29-15:49:26.502155 140374655870720 EVENT_LOG_v1 {"time_micros": 1701272966502146, "job": 15, "event": "compaction_started", "compaction_reason": "LevelL0FilesNum", "files_L0": [255, 253, 251, 249], "files_L1": [241], "score": 1, "input_data_size": 83911, "oldest_snapshot_seqno": -1}
+2023/11/29-15:49:26.505185 140374655870720 [db/compaction/compaction_job.cc:1594] [default] [JOB 15] Generated table #256: 98 keys, 11909 bytes, temperature: kUnknown
+2023/11/29-15:49:26.505229 140374655870720 EVENT_LOG_v1 {"time_micros": 1701272966505194, "cf_name": "default", "job": 15, "event": "table_file_creation", "file_number": 256, "file_size": 11909, "file_checksum": "", "file_checksum_func_name": "Unknown", "smallest_seqno": 0, "largest_seqno": 0, "table_properties": {"data_size": 10852, "index_size": 65, "index_partitions": 0, "top_level_index_size": 0, "index_key_is_user_key": 1, "index_value_is_delta_encoded": 1, "filter_size": 0, "raw_key_size": 2266, "raw_average_key_size": 23, "raw_value_size": 9013, "raw_average_value_size": 91, "num_data_blocks": 3, "num_entries": 98, "num_filter_entries": 0, "num_deletions": 0, "num_merge_operands": 0, "num_range_deletions": 0, "format_version": 0, "fixed_key_len": 0, "filter_policy": "", "column_family_name": "default", "column_family_id": 0, "comparator": "leveldb.BytewiseComparator", "merge_operator": "meta_store merge", "prefix_extractor_name": "rocksdb.FixedPrefix.13", "property_collectors": "[]", "compression": "NoCompression", "compression_options": "window_bits=-14; level=32767; strategy=0; max_dict_bytes=0; zstd_max_train_bytes=0; enabled=0; max_dict_buffer_bytes=0; use_zstd_dict_trainer=1; ", "creation_time": 1695376294, "oldest_key_time": 0, "file_creation_time": 1701272966, "slow_compression_estimated_data_size": 0, "fast_compression_estimated_data_size": 0, "db_id": "fa55ebed-ee06-445e-8104-2726a67066dc", "db_session_id": "4U5WXBZFD8ZPZWPKDEPE", "orig_file_number": 256, "seqno_to_time_mapping": "N/A"}}
+2023/11/29-15:49:26.507377 140374655870720 (Original Log Time 2023/11/29-15:49:26.507003) [db/compaction/compaction_job.cc:1667] [default] [JOB 15] Compacted 4@0 + 1@1 files to L1 => 11909 bytes
+2023/11/29-15:49:26.507379 140374655870720 (Original Log Time 2023/11/29-15:49:26.507302) [db/compaction/compaction_job.cc:883] [default] compacted to: files[0 1 0 0 0 0 0] max score 0.00, MB/sec: 30.8 rd, 4.4 wr, level 1, files in(4, 1) out(1 +0 blob) MB in(0.0, 0.1 +0.0 blob) out(0.0 +0.0 blob), read-write-amplify(3.6) write-amplify(0.4) OK, records in: 988, records dropped: 890 output_compression: NoCompression
+2023/11/29-15:49:26.507382 140374655870720 (Original Log Time 2023/11/29-15:49:26.507334) EVENT_LOG_v1 {"time_micros": 1701272966507327, "job": 15, "event": "compaction_finished", "compaction_time_micros": 2727, "compaction_time_cpu_micros": 752, "output_level": 1, "num_output_files": 1, "total_output_size": 11909, "num_input_records": 988, "num_output_records": 98, "num_subcompactions": 1, "output_compression": "NoCompression", "num_single_delete_mismatches": 0, "num_single_delete_fallthrough": 0, "lsm_state": [0, 1, 0, 0, 0, 0, 0]}
+2023/11/29-15:49:26.507419 140374655870720 (Original Log Time 2023/11/29-15:49:26.507418) [db/db_impl/db_impl_compaction_flush.cc:3275] Compaction nothing to do
+2023/11/29-15:49:26.507502 140374955775744 [db/wal_manager.cc:84] Latest Archived log: 250
+2023/11/29-15:49:26.507507 140374955775744 [WARN] [db/db_impl/db_impl_files.cc:91] File Deletions Enable, but not really enabled. Counter: 1
+2023/11/29-15:49:26.507788 140374955775744 [db/db_filesnapshot.cc:407] Number of log files 3
+2023/11/29-15:49:26.507794 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000255.sst
+2023/11/29-15:49:26.509640 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000253.sst
+2023/11/29-15:49:26.511225 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000251.sst
+2023/11/29-15:49:26.512914 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000249.sst
+2023/11/29-15:49:26.514395 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking 000241.sst
+2023/11/29-15:49:26.516385 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:137] Copying MANIFEST-000245
+2023/11/29-15:49:26.518755 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:143] Creating CURRENT
+2023/11/29-15:49:26.520278 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:127] Hard Linking OPTIONS-000247
+2023/11/29-15:49:26.522512 140374955775744 [db/db_impl/db_impl_files.cc:84] File Deletions Enabled
+2023/11/29-15:49:26.522533 140374955775744 [db/db_impl/db_impl_files.cc:468] [JOB 0] Try to delete WAL files size 1947, prev total WAL file size 1947, number of live WAL files 2.
+2023/11/29-15:49:26.523519 140374955775744 [file/delete_scheduler.cc:78] Deleted file /cube/conf/.cubestore/data/metastore/000255.sst immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2023/11/29-15:49:26.523535 140374955775744 EVENT_LOG_v1 {"time_micros": 1701272966523533, "job": 0, "event": "table_file_deletion", "file_number": 255}
+2023/11/29-15:49:26.523919 140374955775744 [file/delete_scheduler.cc:78] Deleted file /cube/conf/.cubestore/data/metastore/000253.sst immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2023/11/29-15:49:26.523929 140374955775744 EVENT_LOG_v1 {"time_micros": 1701272966523927, "job": 0, "event": "table_file_deletion", "file_number": 253}
+2023/11/29-15:49:26.524685 140374955775744 [db/wal_manager.cc:287] Move log file /cube/conf/.cubestore/data/metastore/000252.log to /cube/conf/.cubestore/data/metastore/archive/000252.log -- OK
+2023/11/29-15:49:26.525139 140374955775744 [file/delete_scheduler.cc:78] Deleted file /cube/conf/.cubestore/data/metastore/000251.sst immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2023/11/29-15:49:26.525148 140374955775744 EVENT_LOG_v1 {"time_micros": 1701272966525146, "job": 0, "event": "table_file_deletion", "file_number": 251}
+2023/11/29-15:49:26.525615 140374955775744 [file/delete_scheduler.cc:78] Deleted file /cube/conf/.cubestore/data/metastore/000249.sst immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2023/11/29-15:49:26.525624 140374955775744 EVENT_LOG_v1 {"time_micros": 1701272966525623, "job": 0, "event": "table_file_deletion", "file_number": 249}
+2023/11/29-15:49:26.526056 140374955775744 [file/delete_scheduler.cc:78] Deleted file /cube/conf/.cubestore/data/metastore/000241.sst immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2023/11/29-15:49:26.526064 140374955775744 EVENT_LOG_v1 {"time_micros": 1701272966526063, "job": 0, "event": "table_file_deletion", "file_number": 241}
+2023/11/29-15:49:26.526457 140374955775744 [db/wal_manager.cc:287] Move log file /cube/conf/.cubestore/data/metastore/000252.log to /cube/conf/.cubestore/data/metastore/archive/000252.log -- IO error: No such file or directory: While renaming a file to /cube/conf/.cubestore/data/metastore/archive/000252.log: /cube/conf/.cubestore/data/metastore/000252.log: No such file or directory
+2023/11/29-15:49:26.528023 140374955775744 [file/delete_scheduler.cc:78] Deleted file /cube/conf/.cubestore/data/metastore/archive/000248.log immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2023/11/29-15:49:26.530446 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:179] Snapshot DONE. All is good
+2023/11/29-15:49:26.530450 140374955775744 [utilities/checkpoint/checkpoint_impl.cc:181] Snapshot sequence number: 8804
+2023/11/29-15:52:37.299132 140374630692608 [db/db_impl/db_impl.cc:1110] ------- DUMPING STATS -------
+2023/11/29-15:52:37.299789 140374630692608 [db/db_impl/db_impl.cc:1111] 
+** DB Stats **
+Uptime(secs): 22416.2 total, 600.0 interval
+Cumulative writes: 8945 writes, 1054 keys, 8945 commit groups, 1.0 writes per commit group, ingest: 0.00 GB, 0.00 MB/s
+Cumulative WAL: 8945 writes, 0 syncs, 8945.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 309 writes, 229 keys, 309 commit groups, 1.0 writes per commit group, ingest: 0.02 MB, 0.00 MB/s
+Interval WAL: 309 writes, 0 syncs, 309.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   1.0      0.0      1.4      0.02              0.00         4    0.004       0      0       0.0       0.0
+  L1      1/0   11.63 KB   0.0      0.0     0.0      0.0       0.0     -0.0       0.0   0.4     29.3      4.2      0.00              0.00         1    0.003     988    890       0.0       0.0
+ Sum      1/0   11.63 KB   0.0      0.0     0.0      0.0       0.0     -0.0       0.0   1.4      3.9      1.8      0.02              0.00         5    0.004     988    890       0.0       0.0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0     -0.0       0.0   2.5      6.0      1.4      0.01              0.00         3    0.004     988    890       0.0       0.0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0     -0.0       0.0   0.0     29.3      4.2      0.00              0.00         1    0.003     988    890       0.0       0.0
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      1.4      0.02              0.00         4    0.004       0      0       0.0       0.0
+
+Blob file count: 0, total size: 0.0 GB, garbage size: 0.0 GB, space amp: 0.0
+
+Uptime(secs): 22416.2 total, 600.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+Block cache LRUCache@0x5622ab582300#21 capacity: 8.00 MB usage: 90.65 KB table_size: 256 occupancy: 87 collections: 35 last_copies: 0 last_secs: 3e-05 secs_since: 0
+Block cache entry stats(count,size,portion): DataBlock(25,88.44 KB,1.07963%) Misc(1,0.00 KB,0%)
+
+** File Read Latency Histogram By Level [default] **
