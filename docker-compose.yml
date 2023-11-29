@@ -1,6 +1,6 @@
 version: "2.2"
 
- 
+
 
 services:
 
@@ -20,7 +20,9 @@ services:
 
       - REDIS_HOST=redis
 
-      - CUBEJS_REFRESH_WORKER=false
+      - CUBEJS_DEV_MODE=true
+
+      - CUBEJS_REFRESH_WORKER=true
 
       - REDIS_HOST_PASSWORD=MDNcVb924a
 
@@ -54,7 +56,7 @@ services:
 
       - REDIS_HOST_PASSWORD=MDNcVb924a
 
-      - CUBEJS_REFRESH_WORKER=false
+      - CUBEJS_REFRESH_WORKER=true
 
       - CUBEJS_REDIS_PASSWORD=MDNcVb924a
 
